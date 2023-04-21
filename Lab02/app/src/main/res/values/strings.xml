@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Amith\'s Amazing Lab02</string>
+    <string name="amith_was_here"><i><b>Random</b></i><big> food combination </big><font face="monospace">generator</font></string>
+    <string name="click_me_please"><u>Generate</u></string>
+    <string name="foodDisplay">Food: %1$s</string>
+    <string name="toppingDisplay">Topping: %1$s</string>
+    <string name="beverageDisplay">Beverage: %1$s</string>
+    <string name="fullDisplay">%1$s %2$s %3$s</string>
+    <string name="displayName">Hi %1$s ! you should try:</string>
+    <string name="forward">forward</string>
+    <string name="backwards">backwards</string>
+    <string name="beverage">Beverage</string>
+    <string name="toppings">Toppings</string>
+    <string name="fooddisplay">I\'ll give you a random combination</string>
+    <string name="toppingsdisplay"> with a food, topping, &amp; beverage</string>
+    <string name="beveragesdisplay"></string>
+    <string name="enter_your_name">Enter your name:</string>
+    <string-array name="food">
+        <item>Pasta</item>
+        <item>Rice</item>
+        <item>Pizza</item>
+        <item>Salad</item>
+        <item>Soup</item>
+        <item>Baked Potato</item>
+    </string-array>
+    <string-array name="toppings">
+        <item>Ketchup</item>
+        <item>Olives</item>
+        <item>Marshmallow</item>
+        <item>CHEESE</item>
+        <item>Nutella</item>
+        <item>Rainbow Sprinkles</item>
+    </string-array>
+    <string-array name="beverages">
+        <item>Milk</item>
+        <item>Sparkling Water</item>
+        <item>Piña Colada</item>
+        <item>Mountain Dew Baja Blast</item>
+        <item>Oreo Milkshake</item>
+        <item>Orange Juice</item>
+    </string-array>
+</resources>

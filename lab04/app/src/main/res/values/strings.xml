@@ -1,0 +1,6 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">lab04</string>
+    <string name="bee" >
+        We shall send to the moon 240,000 miles away, a giant rocket, more than 300 feet tall on an untried mission to an unknown celestial body, and then return it safely to Earth. But why some say the moon? Why choose this as our goal? And they may well ask, why climb the highest mountain? Why 35 years ago fly the Atlantic? We choose to go to the moon. We chose to go to the moon. We choose to go to the moon in this decade and do the other things not because they are easy, but because they are hard. Because that goal will serve to organize and measure the best of our energies and skills, because that challenge is one that we’re willing to accept. One we are unwilling to postpone. And therefore, as we set sail, we ask God’s blessing on the most hazardous and dangerous and greatest adventure that man has ever gone.
+    </string>
+</resources>

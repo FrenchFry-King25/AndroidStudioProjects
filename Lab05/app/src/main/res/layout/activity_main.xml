@@ -1,0 +1,190 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/lifetimeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/lifetime_stats"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/onCreatelifetime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lifetimeTitle"
+            android:layout_marginTop="30dp"
+            android:text="@string/onCreatelifetime"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/onStartlifetime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/onCreatelifetime"
+            android:layout_marginTop="30dp"
+            android:text="@string/onStartlifetime"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/onResumelifetime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/onStartlifetime"
+            android:layout_marginTop="30dp"
+            android:text="@string/onResumelifetime"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/onPauselifetime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/onResumelifetime"
+            android:layout_marginTop="30dp"
+            android:text="@string/onPauselifetime"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/onStoplifetime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/onPauselifetime"
+            android:layout_marginTop="30dp"
+            android:text="@string/onStoplifetime"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/onRestartlifetime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/onStoplifetime"
+            android:layout_marginTop="30dp"
+            android:text="@string/onRestartlifetime"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/onDestorylifetime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/onRestartlifetime"
+            android:layout_marginTop="30dp"
+            android:text="@string/onDestorylifetime"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/buttonlifetime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/onDestorylifetime"
+            android:layout_marginTop="60dp"
+            android:text="@string/clear_lifetime" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/sessionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/session_stats"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/onCreatesession"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sessionTitle"
+            android:layout_marginTop="30dp"
+            android:text="@string/onCreatesession"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/onStartsession"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/onCreatesession"
+            android:layout_marginTop="30dp"
+            android:text="@string/onStartsession"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/onResumesession"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/onStartsession"
+            android:layout_marginTop="30dp"
+            android:text="@string/onResumesession"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/onPausesession"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/onResumesession"
+            android:layout_marginTop="30dp"
+            android:text="@string/onPausesession"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/onStopsession"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/onPausesession"
+            android:layout_marginTop="30dp"
+            android:text="@string/onStopsession"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/onRestartsession"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/onStopsession"
+            android:layout_marginTop="30dp"
+            android:text="@string/onRestartsession"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/onDestorysession"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/onRestartsession"
+            android:layout_marginTop="30dp"
+            android:text="@string/onDestorysession"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/buttonsession"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/onDestorysession"
+            android:layout_marginTop="60dp"
+            android:text="@string/clear_session" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

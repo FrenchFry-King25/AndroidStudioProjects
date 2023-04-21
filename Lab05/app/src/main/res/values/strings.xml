@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Lab05</string>
+    <string name="temptext">tempText</string>
+    <string name="onCreatelifetime">onCreate: %1$d</string>
+    <string name="onStartlifetime">onStart: %1$d</string>
+    <string name="onResumelifetime">onResume: %1$d</string>
+    <string name="onPauselifetime">onPause: %1$d</string>
+    <string name="onStoplifetime">onStop: %1$d</string>
+    <string name="onRestartlifetime">onRestart: %1$d</string>
+    <string name="onDestorylifetime">onDestory: %1$d</string>
+    <string name="onCreatesession">onCreate: %1$d</string>
+    <string name="onStartsession">onStart: %1$d</string>
+    <string name="onResumesession">onResume: %1$d</string>
+    <string name="onPausesession">onPause: %1$d</string>
+    <string name="onStopsession">onStop: %1$d</string>
+    <string name="onRestartsession">onRestart: %1$d</string>
+    <string name="onDestorysession">onDestory: %1$d</string>
+    <string name="clear_session">Clear Session</string>
+    <string name="clear_lifetime">Clear Lifetime</string>
+    <string name="lifetime_stats">Lifetime Stats</string>
+    <string name="session_stats">Session Stats</string>
+</resources>
