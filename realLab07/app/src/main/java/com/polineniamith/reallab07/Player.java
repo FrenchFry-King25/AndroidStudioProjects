@@ -6,11 +6,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
+
+import pl.droidsonroids.gif.GifImageView;
 
 public class Player extends Fragment {
     View view;
@@ -38,9 +42,24 @@ public class Player extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         this.view = view;
+
+        String name = getArguments().getString("name", "");
+        int picture = getArguments().getInt("picture", 0);
+        String color = getArguments().getString("color", "");
+        int gif = getArguments().getInt("gif", 0);
+
+        TextView nameView = view.findViewById(R.id.name);
+        nameView.setText(name);
+        ImageView pictureView = view.findViewById(R.id.person);
+        pictureView.setImageResource(picture);
+        ConstraintLayout bg = view.findViewById(R.id.background);
+        bg.setBackgroundColor(Color.parseColor(color));
+        GifImageView gifView = view.findViewById(R.id.gif);
+        gifView.setImageResource(gif);
     }
 
-    public void update(String string) {
-
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
     }
 }

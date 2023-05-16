@@ -12,7 +12,6 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     TextView textMain;
-    FragmentA fragA;
     DrawView dv;
     Button button;
     public static MediaPlayer mp;
@@ -33,13 +32,6 @@ public class MainActivity extends AppCompatActivity {
         mp.setVolume((float) 0.9, (float) .9);
 
     }
-
-    public void update_main(View view) {
-        textMain.setText("Hello123");
-        ((Button)view).setText("YO I CLICKED");
-        fragA.update("LETS GO i updated");
-    }
-
     public void reverseY(View view) {
         if(fast) {
             dv.faster();

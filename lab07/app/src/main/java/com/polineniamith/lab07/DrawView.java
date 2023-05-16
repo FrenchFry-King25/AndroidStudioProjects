@@ -21,7 +21,7 @@ public class DrawView extends View {
     public DrawView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
 
-         bballs = new basketball[]{new basketball(p, 1200f, 700f, 10), new basketball(p, 250f, 500f, 20), new basketball(p, 750f, 300f, 15)};
+         bballs = new basketball[]{new basketball(p, 1200f, 700f, 5, 6), new basketball(p, 250f, 500f, 10, 8), new basketball(p, 750f, 300f, 10, 10)};
     }
 
     @Override
@@ -29,10 +29,17 @@ public class DrawView extends View {
         super.onDraw(canvas);
 
         for(int i = 0; i < bballs.length; i++) {
-            bballs[i].update(getHeight());
+            bballs[i].update(getHeight(), getWidth());
             bballs[i].draw(canvas);
+            if(bballs[i].intersect(bballs[(i + 1)%3])) {
+                bballs[i].flipSpeed();
+                bballs[(i + 1)%3].flipSpeed();
+            }
+            if(bballs[i].intersect(bballs[(i + 2)%3])) {
+                bballs[i].flipSpeed();
+                bballs[(i + 2)%3].flipSpeed();
+            }
         }
-
 
         invalidate();
 

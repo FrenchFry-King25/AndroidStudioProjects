@@ -5,21 +5,28 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.LinearGradient;
 import android.graphics.Paint;
+import android.graphics.RectF;
 import android.graphics.Shader;
 import android.media.MediaPlayer;
 
-public class basketball {
+public class basketball extends RectF {
     private float bX, bY, bR = 150f;
-    private float velocity;
+    private float velocityY;
+    private float velocityX;
     private float dv;
+    private float dx;
     private Paint p;
 
-    public basketball(Paint setPaint, float startX, float startY, float v) {
+    public basketball(Paint setPaint, float startX, float startY, float v, float x) {
+        super();
         p = setPaint;
         bX = startX;
         bY = startY;
-        velocity = v;
-        dv = velocity;
+        velocityY = v;
+        velocityX = x;
+        dv = velocityY;
+        dx = velocityX;
+        set(bX - bR,bY - bR, bX + bR, bY + bR);
     }
 
     public void draw(Canvas c) {
@@ -39,24 +46,36 @@ public class basketball {
         c.drawLine((float) (bX - (bR*.707)), (float) (bY + (bR*.707)), (float) (bX - (.5*bR)), bY , p);
     }
 
-    public void update(float height) {
+    public void update(float height, float width) {
         if((bY + 490) < (0 + 4*bR)){
-            dv = velocity;
+            dv = velocityY;
             MainActivity.mp.stop();
             MainActivity.mp.release();
             MainActivity.mp = MediaPlayer.create(MainActivity.getAppContext(), R.raw.swish);
             MainActivity.mp.start();
         } else if( bY > (height - 500 - 2*bR) ){
-            dv = -1*velocity;
+            dv = -1*velocityY;
             MainActivity.mp.stop();
             MainActivity.mp.release();
             MainActivity.mp = MediaPlayer.create(MainActivity.getAppContext(), R.raw.bounce);
             MainActivity.mp.start();
         }
+        if((bX) < (0 + bR)){
+            dx = velocityX;
+        } else if( bX > (width - bR) ){
+            dx = (-1) * velocityX;
+        }
         bY += dv;
+        bX += dx;
+        set(bX - bR,bY - bR, bX + bR, bY + bR);
     }
 
     public void setSpeed(float newSpeed) {
-        velocity = newSpeed;
+        velocityY = newSpeed;
+    }
+
+    public void flipSpeed() {
+        dx *= -1;
+        dv *= -1;
     }
 }
